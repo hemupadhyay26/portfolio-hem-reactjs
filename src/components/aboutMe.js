@@ -22,11 +22,12 @@ const AboutMe = () => {
                 </div>
 
                 {/* Right Box */}
-                <div className="flex-1 text-center md:text-left space-y-4">
+                <div className="flex-1 text-center md:text-left space-y-4 pr-4">
                     <h3 className="text-xl font-bold text-primary">About Me</h3>
                     <h4 className="text-3xl text-white font-bold">Hem Chandra Upadhyay Details</h4>
-                    <div className="text-secondary w-80">I'm Hem Chandra Upadhyay, a Computer Science graduate skilled in data structures, algorithms, AWS Cloud, and DevOps. I've developed various projects and am proficient in C++, Bash, Git, JavaScript, SQL, and frameworks like ReactJS, React Native, and NodeJS.</div>
-
+                    <div className="text-secondary max-w-full md:max-w-md">
+                        I'm Hem Chandra Upadhyay, a Computer Science graduate skilled in data structures, algorithms, AWS Cloud, and DevOps. I've developed various projects and am proficient in C++, Bash, Git, JavaScript, SQL, and frameworks like ReactJS, React Native, and NodeJS.
+                    </div>
                     {/* Cards with Name and Other Details */}
                     <div className="space-y-4">
                         <div className="bg-box p-4 rounded-lg shadow-md border-l-4 border-primary">
@@ -42,7 +43,7 @@ const AboutMe = () => {
                             <p className="text-secondary">Uttarakhand, India</p>
                         </div>
                     </div>
-                    
+
                     <a
                         href="#"
                         className="hidden md:inline-block bg-primary text-box py-3 px-6 rounded-md text-lg transition duration-300 border-2 border-primary hover:bg-background hover:text-primary"
