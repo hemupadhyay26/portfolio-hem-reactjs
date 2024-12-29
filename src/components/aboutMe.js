@@ -1,7 +1,7 @@
 import hero2 from '../assets/hero2.jpeg';
 const AboutMe = () => {
     return (
-        <div className="flex flex-col items-center py-10 space-y-6">
+        <div className="flex flex-col items-center py-10 space-y-6" id='about-me'>
             {/* Title */}
             <div className="font-bold text-3xl text-white">Who am I?</div>
 
