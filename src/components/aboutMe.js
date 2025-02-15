@@ -1,9 +1,10 @@
 import hero2 from '../assets/hero2.jpeg';
+import ShinyText from '../blocks/TextAnimations/ShinyText/ShinyText';
 const AboutMe = () => {
     return (
         <div className="flex flex-col items-center py-10 space-y-6" id='about-me'>
             {/* Title */}
-            <div className="font-bold text-3xl text-white">Who am I?</div>
+            <div className="font-bold text-3xl text-white">Who am I ?</div>
 
             {/* Vertical Line */}
             <div className="w-1 h-12 bg-primary"></div>
@@ -23,8 +24,8 @@ const AboutMe = () => {
 
                 {/* Right Box */}
                 <div className="flex-1 text-center md:text-left space-y-4 pr-4">
-                    <h3 className="text-xl font-bold text-primary">About Me</h3>
-                    <h4 className="text-3xl text-white font-bold">Hem Chandra Upadhyay</h4>
+                    <h3 className="text-2xl font-bold text-primary">About Me</h3>
+                    <ShinyText text="Hem Chandra Upadhyay" disabled={false} speed={3} className='text-3xl font-bold' />
                     <div className="text-secondary max-w-full md:max-w-md">
                         I'm Hem Chandra Upadhyay, a Computer Science graduate skilled in data structures, algorithms, AWS Cloud, and DevOps. I've developed various projects and am proficient in Bash, Git, JavaScript, SQL, and frameworks like ReactJS, React Native, and NodeJS.
                     </div>
