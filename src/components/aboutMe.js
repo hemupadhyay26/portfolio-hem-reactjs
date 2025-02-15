@@ -26,7 +26,7 @@ const AboutMe = () => {
                     <h3 className="text-xl font-bold text-primary">About Me</h3>
                     <h4 className="text-3xl text-white font-bold">Hem Chandra Upadhyay</h4>
                     <div className="text-secondary max-w-full md:max-w-md">
-                        I'm Hem Chandra Upadhyay, a Computer Science graduate skilled in data structures, algorithms, AWS Cloud, and DevOps. I've developed various projects and am proficient in C++, Bash, Git, JavaScript, SQL, and frameworks like ReactJS, React Native, and NodeJS.
+                        I'm Hem Chandra Upadhyay, a Computer Science graduate skilled in data structures, algorithms, AWS Cloud, and DevOps. I've developed various projects and am proficient in Bash, Git, JavaScript, SQL, and frameworks like ReactJS, React Native, and NodeJS.
                     </div>
                     {/* Cards with Name and Other Details */}
                     <div className="space-y-4">

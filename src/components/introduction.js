@@ -40,7 +40,7 @@ const Introduction = () => {
                 <div className="flex-1 text-center md:text-left order-2 md:order-3">
                     <h4 className="text-2xl md:text-3xl font-bold text-primary mb-4">I am a DevOps engineer</h4>
                     <p className="text-base md:text-lg text-secondary mb-6">
-                        I'm Hem Chandra Upadhyay, a Computer Science graduate skilled in data structures, algorithms, AWS Cloud, and DevOps. I've developed various projects and am proficient in C++, Bash, Git, JavaScript, SQL, and frameworks like ReactJS, React Native, and NodeJS.
+                        I'm Hem Chandra Upadhyay, a Computer Science graduate skilled in data structures, algorithms, AWS Cloud, and DevOps. I've developed various projects and am proficient in Bash, Git, JavaScript, SQL, and frameworks like ReactJS, React Native, and NodeJS.
                     </p>
 
 
