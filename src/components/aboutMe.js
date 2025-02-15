@@ -1,5 +1,7 @@
 import hero2 from '../assets/hero2.jpeg';
 import ShinyText from '../blocks/TextAnimations/ShinyText/ShinyText';
+import ResumePdf from "../assets/Resume2Full.pdf";
+
 const AboutMe = () => {
     return (
         <div className="flex flex-col items-center py-10 space-y-6" id='about-me'>
@@ -46,7 +48,7 @@ const AboutMe = () => {
                     </div>
 
                     <button
-                        onClick={() => alert('Resume will be available soon!')}
+                        onClick={() => window.open(ResumePdf, '_blank')}
                         className="hidden md:inline-block bg-primary text-box py-3 px-6 rounded-md text-lg transition duration-300 border-2 border-primary hover:bg-background hover:text-primary"
                     >
                         Download Resume

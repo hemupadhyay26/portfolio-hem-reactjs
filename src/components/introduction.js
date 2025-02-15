@@ -2,6 +2,7 @@ import heroImage from "../assets/hero.png";
 import CircularText from "../blocks/TextAnimations/CircularText/CircularText";
 import ShinyText from "../blocks/TextAnimations/ShinyText/ShinyText";
 import RotatingText from "../blocks/TextAnimations/RotatingText/RotatingText";
+import ResumePdf from "../assets/Resume2Full.pdf";
 
 const Introduction = () => {
     return (
@@ -28,12 +29,11 @@ const Introduction = () => {
                             rotationInterval={3000}
                         /></h3>
                     <button
-                        onClick={() => console.log("Resume download triggered!")}
+                        onClick={() => window.open(ResumePdf, '_blank')}
                         className="bg-primary text-box py-3 px-6 rounded-md text-lg transition duration-300 border-2 border-primary hover:bg-background hover:text-primary"
                     >
                         Download Resume
                     </button>
-
                 </div>
 
                 {/* Right side */}
@@ -47,7 +47,7 @@ const Introduction = () => {
                     {/* Container for Let’s Talk and CircularText */}
                     <div className="flex flex-col items-center md:items-start">
                         <button
-                            onClick={() => console.log("Opening contact form")}
+                            onClick={() => alert("Contact form will be available soon!")}
                             className="group text-primary font-bold text-lg md:text-xl flex items-center justify-center md:justify-start transition-all duration-300 hover:text-secondary"
                         >
                             Let’s Talk
