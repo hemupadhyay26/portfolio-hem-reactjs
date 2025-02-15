@@ -40,9 +40,10 @@ const Introduction = () => {
                     <img
                         src={heroImage}
                         alt="hem upadhyay"
-                        className="w-72 md:w-auto h-auto mx-auto shadow-lg"
+                        className="w-full max-w-xs md:max-w-md h-auto mx-auto shadow-lg object-cover"
                     />
                 </div>
+
             </div>
         </div>
     );

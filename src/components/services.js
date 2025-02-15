@@ -55,7 +55,7 @@ const Services = () => {
             <div className="flex flex-col items-center space-y-4 text-center mb-8">
                 <p className="text-secondary mt-2">Services</p>
                 <h2 className="text-4xl font-bold text-white">What i do ?</h2>
-                <div className="w-1 h-16 bg-primary"></div>
+                <div className="w-1 h-12 bg-primary"></div>
             </div>
 
             {/* Carousel */}

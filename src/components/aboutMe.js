@@ -6,7 +6,7 @@ const AboutMe = () => {
             <div className="font-bold text-3xl text-white">Who am I?</div>
 
             {/* Vertical Line */}
-            <div className="w-1 h-16 bg-primary"></div>
+            <div className="w-1 h-12 bg-primary"></div>
 
             {/* Description */}
             <div className="flex flex-col md:flex-row items-center justify-between space-x-6 space-y-2 md:space-y-0">
