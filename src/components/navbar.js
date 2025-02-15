@@ -27,21 +27,20 @@ const Navbar = () => {
         <>
             {/* Desktop Navbar - visible on screens larger than 'sm' */}
             <div
-                className={`hidden sm:flex place-content-evenly items-center p-5 bg-transparent transition-all duration-300 ${
-                    isScrolled ? "bg-primary text-black" : ""
-                }`}
+                className={`hidden sm:flex place-content-evenly items-center p-5 bg-transparent transition-all duration-300 ${isScrolled ? "bg-primary text-black" : ""
+                    }`}
             >
                 {navigationLinks.map((link, index) => (
                     link === "Hem Upadhyay" ? (
-                        <a
+                        <button
                             key={index}
-                            href="#"
                             className="font-bold text-3xl text-box mx-8"
-                            onClick={toggleMenu} // Open the menu when Hem Upadhyay is clicked
+                            onClick={toggleMenu}
                         >
                             {link}
                             <sup> ⓗ </sup>
-                        </a>
+                        </button>
+
                     ) : (
                         <a
                             key={index}
@@ -59,12 +58,10 @@ const Navbar = () => {
             <div className="sm:hidden flex justify-between items-center p-5 bg-box relative">
                 {/* Hem Upadhyay link that also opens the menu on mobile */}
                 <div
-                    className={`text-2xl font-bold text-primary sm:hidden`}
-                    onClick={toggleMenu} // Open the menu when Hem Upadhyay is clicked
+                    className="text-2xl font-bold text-primary sm:hidden cursor-pointer"
+                    onClick={toggleMenu} // Opens the menu when clicked
                 >
-                    <a href="#">
-                        Hem Upadhyay <sup>ⓗ</sup>
-                    </a>
+                    Hem Upadhyay <sup>ⓗ</sup>
                 </div>
                 {/* Hamburger Icon */}
                 <button

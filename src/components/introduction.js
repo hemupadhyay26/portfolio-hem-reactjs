@@ -1,4 +1,3 @@
-import DynamicTextAnimation from "./dynamicTextAnimation";
 import heroImage from "../assets/hero.png";
 import CircularText from "../blocks/TextAnimations/CircularText/CircularText";
 import ShinyText from "../blocks/TextAnimations/ShinyText/ShinyText";
@@ -28,12 +27,13 @@ const Introduction = () => {
                             transition={{ type: "spring", damping: 30, stiffness: 400 }}
                             rotationInterval={3000}
                         /></h3>
-                    <a
-                        href="#"
-                        className="hidden md:inline-block bg-primary text-box py-3 px-6 rounded-md text-lg transition duration-300 border-2 border-primary hover:bg-background hover:text-primary"
+                    <button
+                        onClick={() => console.log("Resume download triggered!")}
+                        className="bg-primary text-box py-3 px-6 rounded-md text-lg transition duration-300 border-2 border-primary hover:bg-background hover:text-primary"
                     >
                         Download Resume
-                    </a>
+                    </button>
+
                 </div>
 
                 {/* Right side */}
@@ -46,15 +46,16 @@ const Introduction = () => {
 
                     {/* Container for Let’s Talk and CircularText */}
                     <div className="flex flex-col items-center md:items-start">
-                        <a
-                            href="#"
+                        <button
+                            onClick={() => console.log("Opening contact form")}
                             className="group text-primary font-bold text-lg md:text-xl flex items-center justify-center md:justify-start transition-all duration-300 hover:text-secondary"
                         >
                             Let’s Talk
                             <span className="ml-2 text-xl md:text-2xl transform transition-all duration-300 group-hover:translate-x-2">
                                 &#8594;
                             </span>
-                        </a>
+                        </button>
+
 
                         {/* Circular Component Below Let’s Talk (Hidden on Mobile) */}
                         <div className="hidden md:block mt-6">

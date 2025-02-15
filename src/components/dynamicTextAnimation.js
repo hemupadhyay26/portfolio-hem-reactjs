@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
-
+import { useEffect, useState, useMemo } from "react";
 
 const DynamicTextAnimation = () => {
-  const texts = [
+  const texts = useMemo(() => [
     'Hem Chandra Upadhyay',
     'Developer',
     'Creative Designer',
     'Tech Enthusiast',
-    'Devops engineer'
-  ];
+    'DevOps Engineer'
+  ], []); // ✅ useMemo ensures texts array doesn't change on every render
+
   const [currentText, setCurrentText] = useState('');
   const [fullText, setFullText] = useState(texts[0]);
   const [index, setIndex] = useState(0);
@@ -29,7 +29,7 @@ const DynamicTextAnimation = () => {
         if (currentText.length > 0) {
           setCurrentText(prev => fullText.slice(0, prev.length - 1));
         } else {
-          setIndex((prevIndex) => (prevIndex + 1) % texts.length);
+          setIndex(prevIndex => (prevIndex + 1) % texts.length);
           setFullText(texts[(index + 1) % texts.length]);
           setTyping(true);
         }

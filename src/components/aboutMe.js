@@ -44,12 +44,13 @@ const AboutMe = () => {
                         </div>
                     </div>
 
-                    <a
-                        href="#"
+                    <button
+                        onClick={() => alert('Resume will be available soon!')}
                         className="hidden md:inline-block bg-primary text-box py-3 px-6 rounded-md text-lg transition duration-300 border-2 border-primary hover:bg-background hover:text-primary"
                     >
                         Download Resume
-                    </a>
+                    </button>
+
 
                 </div>
             </div>
