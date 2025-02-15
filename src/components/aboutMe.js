@@ -24,7 +24,7 @@ const AboutMe = () => {
                 {/* Right Box */}
                 <div className="flex-1 text-center md:text-left space-y-4 pr-4">
                     <h3 className="text-xl font-bold text-primary">About Me</h3>
-                    <h4 className="text-3xl text-white font-bold">Hem Chandra Upadhyay Details</h4>
+                    <h4 className="text-3xl text-white font-bold">Hem Chandra Upadhyay</h4>
                     <div className="text-secondary max-w-full md:max-w-md">
                         I'm Hem Chandra Upadhyay, a Computer Science graduate skilled in data structures, algorithms, AWS Cloud, and DevOps. I've developed various projects and am proficient in C++, Bash, Git, JavaScript, SQL, and frameworks like ReactJS, React Native, and NodeJS.
                     </div>
