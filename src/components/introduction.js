@@ -47,10 +47,10 @@ const Introduction = () => {
                     {/* Container for Let’s Talk and CircularText */}
                     <div className="flex flex-col items-center md:items-start">
                         <button
-                            onClick={() => alert("Contact form will be available soon!")}
+                            onClick={() => alert("Ask CLI will be available soon!")}
                             className="group text-primary font-bold text-lg md:text-xl flex items-center justify-center md:justify-start transition-all duration-300 hover:text-secondary"
                         >
-                            Let’s Talk
+                            Let’s ask cli
                             <span className="ml-2 text-xl md:text-2xl transform transition-all duration-300 group-hover:translate-x-2">
                                 &#8594;
                             </span>
