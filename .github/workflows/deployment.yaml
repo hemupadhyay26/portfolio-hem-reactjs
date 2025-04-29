@@ -3,7 +3,6 @@ name: Deploy React App to S3
 on:
   push:
     branches:
-      - dev
       - main
 
 jobs:
@@ -26,29 +25,13 @@ jobs:
       - name: Build React App
         run: npm run build
 
-      - name: Determine S3 Bucket
-        id: set-bucket
-        run: |
-          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-            echo "Deploying to **PRODUCTION** environment"
-            echo "S3_BUCKET=${{ secrets.PROD_AWS_S3_BUCKET }}" >> $GITHUB_ENV
-            echo "Bucket Name: ${{ secrets.PROD_AWS_S3_BUCKET }}"
-          elif [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
-            echo "Deploying to **DEVELOPMENT** environment"
-            echo "S3_BUCKET=${{ secrets.DEV_AWS_S3_BUCKET }}" >> $GITHUB_ENV
-            echo "Bucket Name: ${{ secrets.DEV_AWS_S3_BUCKET }}"
-          else
-            echo "Skipping deployment: No valid S3 bucket for branch ${{ github.ref_name }}"
-            exit 0
-          fi
-
-      - name: Upload to S3
-        if: env.S3_BUCKET != ''
-        uses: jakejarvis/s3-sync-action@master
+      - name: Configure AWS
+        uses: aws-actions/configure-aws-credentials@v1
         with:
-          args: --delete
-        env:
-          SOURCE_DIR: build/
-          AWS_S3_BUCKET: ${{ env.S3_BUCKET }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-region: ap-south-1
+      
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./build/ "s3://${{ vars.PROD_AWS_S3_BUCKET }}/" --delete --no-progress --cache-control "max-age=604800"
